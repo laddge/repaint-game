@@ -110,7 +110,7 @@ function finish() {
 
     let level = document.getElementById('level');
     let resultLevel = document.getElementById('resultLevel');
-    resultLevel.innerText += level.options[level.value].value;
+    resultLevel.innerText += level.options[level.value].text;
 
     let mainView = document.getElementById('mainView');
     let resultView = document.getElementById('resultView');
