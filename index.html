@@ -17,7 +17,7 @@
     <hr><br>
     <div class="row mx-auto">
         <div class="mx-auto col-auto" id="startView">
-            <select class="form-select form-select-lg" aria-label="level" id="level">
+            <select class="form-select form-select-lg" aria-label="level" id="level" onchange="selectLevel();">
                 <option selected value="1">レベルを選択</option>
                 <option value="2">超簡単 (2x2)</option>
                 <option value="3">初級 (3x3)</option>
@@ -26,10 +26,11 @@
                 <option value="6">鬼 (6x6)</option>
             </select>
             <div class="text-center">
-                <button class="btn btn-primary m-3" id="startButton">スタート</button>
+                <button class="btn btn-outline-primary m-3" id="startButton" disabled>スタート</button>
             </div>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>
