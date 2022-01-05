@@ -90,6 +90,9 @@ function move(row, col) {
     if (newPosition.split('').includes('-') || newPosition.split('').includes(level.value)) {
         return;
     }
+    let i = Number(newPosition.slice(0, 1));
+    let j = Number(newPosition.slice(1));
+    stateArray[i][j] = (stateArray[i][j] + 1) % 2
     document.getElementById(position).innerText = '';
     let newEl = document.getElementById(newPosition);
     newEl.innerText = emoji;
