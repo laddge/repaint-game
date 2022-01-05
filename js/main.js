@@ -95,4 +95,22 @@ function move(row, col) {
     newEl.innerText = emoji;
     newEl.parentNode.classList.toggle('bg-primary');
     position = newPosition;
+    if (isSolved()) {
+        finish();
+    }
+}
+
+function finish() {
+    let time = document.getElementById('time');
+    let resultTime = document.getElementById('resultTime');
+    resultTime.innerText += time.innerText;
+
+    let level = document.getElementById('level');
+    let resultLevel = document.getElementById('resultLevel');
+    resultLevel.innerText += level.options[level.value].value;
+
+    let mainView = document.getElementById('mainView');
+    let resultView = document.getElementById('resultView');
+    mainView.classList.add('hidden');
+    resultView.classList.remove('hidden');
 }
