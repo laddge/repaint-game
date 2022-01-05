@@ -1,3 +1,15 @@
 .hidden {
     display: none;
 }
+
+#table {
+    width: 70vw;
+    height: 70vw;
+}
+
+@media (min-width: 768px) {
+    #table {
+        width: 40vw;
+        height: 40vw;
+    }
+}
