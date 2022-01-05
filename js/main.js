@@ -48,6 +48,10 @@ function init() {
         }
         stateArray.push(childArray);
     }
+    if (isSolved()) {
+        init();
+        return;
+    }
     for (let i = 0; i < Number(level.value); i++) {
         let tr = document.createElement('tr');
         for (let j = 0; j < Number(level.value); j++) {
