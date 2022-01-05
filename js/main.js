@@ -39,6 +39,8 @@ function start() {
 function init() {
     let level = document.getElementById('level');
     let table = document.getElementById('table');
+    stateArray = [];
+    table.innerHTML = null;
     for (let i = 0; i < Number(level.value); i++) {
         let childArray = [];
         for (let j = 0; j < Number(level.value); j++) {
