@@ -62,3 +62,10 @@ function init() {
         table.appendChild(tr);
     }
 }
+
+function isSolved() {
+    if (!stateArray.some(a => a.includes(0)) || !stateArray.some(a => a.includes(1))) {
+        return true;
+    }
+    return false;
+}
