@@ -111,7 +111,7 @@ function finish() {
 
     let level = document.getElementById('level');
     let resultLevel = document.getElementById('resultLevel');
-    resultLevel.innerText += level.options[level.value].text;
+    resultLevel.innerText += level.options[Number(level.value) - 1].text;
 
     let twShare = document.getElementById('twShare');
     twShare.href += '塗り替えゲームをクリアしました！！%0A%0Aレベル： ' + resultLevel.innerText + '%0Aタイム： ' + resultTime.innerText + '%0A%0Aみんなも挑戦してみよう！！%0A%23塗り替えゲーム%0A';
