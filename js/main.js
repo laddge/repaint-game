@@ -11,3 +11,10 @@ function selectLevel() {
         startButton.disabled = false;
     }
 }
+
+function start() {
+    let startView = document.getElementById('startView');
+    let mainView = document.getElementById('mainView');
+    startView.classList.add('hidden');
+    mainView.classList.remove('hidden');
+}
