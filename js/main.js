@@ -34,8 +34,9 @@ function start() {
         let d = new Date(Date.now() - startTime);
         let m = String(d.getMinutes()).padStart(2, "0");
         let s = String(d.getSeconds()).padStart(2, "0");
-        time.innerText = m + ':' + s;
-    }, 100);
+        let ms = String(d.getMilliseconds()).padStart(3, "0").slice(0, 2);
+        time.innerText = m + ':' + s + ':' + ms;
+    }, 10);
 }
 
 function init() {
