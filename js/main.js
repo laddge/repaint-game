@@ -113,7 +113,7 @@ function finish() {
     resultLevel.innerText += level.options[level.value].text;
 
     let twShare = document.getElementById('twShare');
-    twShare.href += '塗り替えゲームをクリアしました！！%0A%0Aレベル： ' + resultLevel.innerText + '%0Aタイム： ' + resultTime.innerText + '%0A%0Aみんなも挑戦してみよう！！%0A#塗り替えゲーム%0A';
+    twShare.href += '塗り替えゲームをクリアしました！！%0A%0Aレベル： ' + resultLevel.innerText + '%0Aタイム： ' + resultTime.innerText + '%0A%0Aみんなも挑戦してみよう！！%0A%23塗り替えゲーム%0A';
 
     let mainView = document.getElementById('mainView');
     let resultView = document.getElementById('resultView');
