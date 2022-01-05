@@ -18,6 +18,11 @@ function start() {
     startView.classList.add('hidden');
     mainView.classList.remove('hidden');
 
+    history.pushState(null, null);
+    window.addEventListener('popstate', (() => {
+        location.reload();
+    }));
+
     let time = document.getElementById('time');
     let startTime = Date.now();
     setInterval(() => {
