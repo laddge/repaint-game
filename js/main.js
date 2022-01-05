@@ -1,4 +1,6 @@
 let stateArray = []
+let position = '00';
+let emoji = '';
 
 function selectLevel() {
     let level = document.getElementById('level');
@@ -57,7 +59,11 @@ function init() {
         for (let j = 0; j < Number(level.value); j++) {
             let td = document.createElement('td');
             td.setAttribute('class', 'border border-3 border-dark');
-            td.setAttribute('id', String(i) + String(j));
+            let div = document.createElement('div');
+            div.setAttribute('class', 'mx-auto');
+            div.setAttribute('style', 'width: 2em; height: 2em; font-size: 30px;');
+            div.setAttribute('id', String(i) + String(j));
+            td.appendChild(div);
             if (stateArray[i][j] == 1) {
                 td.classList.add('bg-primary');
             }
@@ -65,6 +71,10 @@ function init() {
         }
         table.appendChild(tr);
     }
+    position = '00';
+    let emojis = '😃 😁 😆 😂 😉 😗 😍 🤩 😋 😝 🤪 😇 🤔 🥱 🤨 🙄 🥺 😳 😵 😴'.split(' ');
+    emoji = emojis[Math.floor(Math.random() * emojis.length)];
+    document.getElementById('00').innerText = emoji;
 }
 
 function isSolved() {
