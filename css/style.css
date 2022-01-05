@@ -2,6 +2,11 @@
     display: none;
 }
 
+.movebtn {
+    font-size: 100px;
+    line-height: 0px;
+}
+
 #table {
     width: 70vw;
     height: 70vw;
