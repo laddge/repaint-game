@@ -83,3 +83,16 @@ function isSolved() {
     }
     return false;
 }
+
+function move(row, col) {
+    let level = document.getElementById('level');
+    let newPosition = String(Number(position.slice(0, 1)) + row) + String(Number(position.slice(1)) + col);
+    if (newPosition.split('').includes('-') || newPosition.split('').includes(level.value)) {
+        return;
+    }
+    document.getElementById(position).innerText = '';
+    let newEl = document.getElementById(newPosition);
+    newEl.innerText = emoji;
+    newEl.parentNode.classList.toggle('bg-primary');
+    position = newPosition;
+}
