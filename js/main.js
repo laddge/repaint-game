@@ -1,3 +1,5 @@
+let stateArray = []
+
 function selectLevel() {
     let level = document.getElementById('level');
     let startButton = document.getElementById('startButton');
@@ -23,6 +25,7 @@ function start() {
         location.reload();
     }));
 
+    init();
     let time = document.getElementById('time');
     let startTime = Date.now();
     setInterval(() => {
@@ -31,4 +34,29 @@ function start() {
         let s = String(d.getSeconds()).padStart(2, "0");
         time.innerText = m + ':' + s;
     }, 100);
+}
+
+function init() {
+    let level = document.getElementById('level');
+    let table = document.getElementById('table');
+    for (let i = 0; i < Number(level.value); i++) {
+        let childArray = [];
+        for (let j = 0; j < Number(level.value); j++) {
+            childArray.push(Math.floor(Math.random() * 2));
+        }
+        stateArray.push(childArray);
+    }
+    for (let i = 0; i < Number(level.value); i++) {
+        let tr = document.createElement('tr');
+        for (let j = 0; j < Number(level.value); j++) {
+            let td = document.createElement('td');
+            td.setAttribute('class', 'border border-3 border-dark');
+            td.setAttribute('id', String(i) + String(j));
+            if (stateArray[i][j] == 1) {
+                td.classList.add('bg-primary');
+            }
+            tr.appendChild(td);
+        }
+        table.appendChild(tr);
+    }
 }
